@@ -26,16 +26,22 @@ This repo includes examples for:
 | `/postUserAuthentication` | a user completes single factor authentication (e.g Google auth) |
 | `/preMFA` | before checking if MFA is required |
 | `/userTokens` | ID and access tokens are generated |
+| `planSelection` | A user tries to change plan |
+| `planCancellationRequest` | A user requests to cancel their subscription |
 
 ### Examples
 
+- [Block disposable emails](https://github.com/kinde-starter-kits/workflow-examples/blob/main/preUserRegistration/blockDisposableEmails.ts) - Allows you to block users from signing up with disposable email domains.
 - [Drip feed migration](https://github.com/kinde-starter-kits/workflow-examples/blob/main/existingPassword/dripFeedMigrationWorkflow.ts) - Shows how to check a password against an external database before creating the user in Kinde.
 - [Sync passwords to another system](https://github.com/kinde-starter-kits/workflow-examples/blob/main/newPassword/securelySyncPasswordWorkflow.ts) - Use encryption keys to securely keep passwords in sync between systems.
 - [Custom password validation](https://github.com/kinde-starter-kits/workflow-examples/blob/main/newPassword/customPasswordValidationWorkflow.ts) - Shows how to validate a password against your own rules.
 - [Sync new user data to Hubspot](https://github.com/kinde-starter-kits/workflow-examples/blob/main/postUserAuthentication/syncNewUserToHubspotWorkflow.ts) - Send user data and UTM tags to Hubspot when a new user record is created in Kinde.
+- [TrustPath impossible travel](https://github.com/kinde-starter-kits/workflow-examples/blob/main/postUserAuthentication/impossibleTravelWorkflow.ts) - Evaluate user login risk using TrustPath's API by checking for "impossible travel" patterns based on IP and recent login activity. If high risk is detected, access is blocked proactively.
 - [Set a grace period for MFA](https://github.com/kinde-starter-kits/workflow-examples/blob/main/preMFA/gracePeriodWorkflow.ts) - Don't ask for MFA for a set period of time after a user has logged in.
 - [Add custom claims to access token](https://github.com/kinde-starter-kits/workflow-examples/blob/main/userTokens/customClaimsAccessTokenWorkflow.ts) - Call an external API to get data to add as custom claims to the user access token.
 - [Map M2M applications to organizations](https://github.com/kinde-starter-kits/workflow-examples/blob/main/m2mToken/mapOrgToM2MApplicationWorkflow.ts) - Shows how to map M2M applications to organizations. Useful if using Kinde for B2B API key management
+- [Deny plan change](https://github.com/kinde-starter-kits/workflow-examples/blob/main/planSelection/denyPlanChangeWorkflow.ts) - Prevent a user from changing plans. Useful if they aren't eligible to if in breach of limits
+- [Deny plan cancellation](https://github.com/kinde-starter-kits/workflow-examples/blob/main/planCancellationRequest/denyPlanCancellation.ts) - Prevent a user from cancelling their plan. Useful if you need to do manual deprovisioning
 
 Each example includes:
 
